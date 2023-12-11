@@ -122,12 +122,14 @@ local function JTCJ_fake_script() -- ScreenGui.LocalScript
 		script.Parent.Frame.c.Visible = true
 	end
 	script.Parent.Frame.t.Text = "Intializing anticheat bypass"
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SnowyV4/LunarHub/main/CreditsOrSources/acbypass'))()
 	wait(5)
 	script.Parent.Frame.t.Text = "Bypass Complete! Enjoy"
 	Tween:Play()
 	task.wait(3)
 	Tween:Cancel()
 	script.Parent.Enabled = false
+loadstring(game:HttpGet('https://raw.githubusercontent.com/SnowyV4/LunarHub/main/games/EMWC/src'))()
 	
 end
 coroutine.wrap(JTCJ_fake_script)()
